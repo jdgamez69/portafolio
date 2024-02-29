@@ -10976,13 +10976,29 @@ html {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
 }
-.masthead .masthead-heading {
-  font-size: 2.75rem;
-  line-height: 2.75rem;
+
+.masthead-heading {
+  font-size: 4rem;
+  line-height: 3.5rem;
+  overflow: hidden; /* Oculta el texto que desborda */
+  border-right: .15em solid orange; /* Crea el efecto de cursor */
+  white-space: nowrap; /* Evita el salto de línea */
+  animation: typing 3s steps(40, end); /* Define la animación */
 }
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
 .masthead .masthead-subheading {
   font-size: 1.25rem;
 }
+
+.masthead .masthead-subheading2 {
+  font-size: 1rem;
+}
+
 .masthead .masthead-avatar {
   width: 15rem;
 }
@@ -10992,12 +11008,12 @@ html {
     padding-top: calc(6rem + 104px);
     padding-bottom: 6rem;
   }
-  .masthead .masthead-heading {
-    font-size: 4rem;
-    line-height: 3.5rem;
-  }
+ 
   .masthead .masthead-subheading {
     font-size: 1.5rem;
+  }
+  .masthead .masthead-subheading2 {
+    font-size: 1rem;
   }
 }
 .portfolio .portfolio-item {
@@ -11049,3 +11065,7 @@ html {
 .copyright {
   background-color: #1a252f;
 }
+
+
+
+
