@@ -11090,3 +11090,7 @@ html {
   bottom: 0;
   opacity: 1;
 }
+
+.text-justify {
+  text-align: justify !important;
+}
