@@ -11066,6 +11066,27 @@ html {
   background-color: #1a252f;
 }
 
+.image-container {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 20px; /* Espacio entre la imagen y el botón */
+}
 
+.my-button {
+  position: absolute;
+  bottom: -40px; /* Altura del botón con respecto al contenedor */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: #007bff; /* Color de fondo del botón */
+  color: #fff; /* Color del texto del botón */
+  text-decoration: none; /* Quitamos subrayado */
+  border-radius: 5px; /* Borde redondeado */
+  opacity: 0;
+  transition: bottom 0.3s, opacity 0.3s;
+}
 
-
+.image-container:hover .my-button {
+  bottom: 0;
+  opacity: 1;
+}
