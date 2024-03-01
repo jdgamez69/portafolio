@@ -10978,8 +10978,8 @@ html {
 }
 
 .masthead-heading {
-  font-size: 4rem;
   line-height: 3.5rem;
+  font-size: 3.5vw; /* Tamaño de fuente relativo */
   overflow: hidden; /* Oculta el texto que desborda */
   border-right: .15em solid orange; /* Crea el efecto de cursor */
   white-space: nowrap; /* Evita el salto de línea */
@@ -11003,10 +11003,11 @@ html {
   width: 15rem;
 }
 
-@media (min-width: 992px) {
+@media (min-width: 768px) {
   .masthead {
     padding-top: calc(6rem + 104px);
     padding-bottom: 6rem;
+    font-size: 3rem; /* Tamaño de fuente para pantallas más grandes */
   }
  
   .masthead .masthead-subheading {
@@ -11094,3 +11095,10 @@ html {
 .text-justify {
   text-align: justify !important;
 }
+
+.text-container {
+  max-width: 800px; /* Ajusta el valor según tus preferencias */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+
