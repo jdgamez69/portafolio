@@ -42,3 +42,54 @@ body { font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helve
   max-width: 900px; /* opcional: limita el ancho para que no se vea muy largo */
   margin: 0 auto;   /* centra el bloque */
 }
+
+
+/* Cinta de logos */
+.logo-marquee {
+  overflow: hidden;
+  position: relative;
+  mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  align-items: center;
+  gap: 3rem;             /* separación entre logos */
+  will-change: transform;
+  animation: scroll-logos 30s linear infinite;  /* velocidad del scroll */
+}
+
+.logo {
+  height: 42px;          /* 🔧 ajusta altura de los logos */
+  width: auto;
+  filter: grayscale(1) opacity(0.85);
+  transition: filter .2s ease, transform .2s ease;
+}
+
+.logo:hover {
+  filter: grayscale(0) opacity(1);
+  transform: scale(1.04);
+}
+
+/* Pausa al pasar el mouse */
+.logo-marquee:hover .marquee-track {
+  animation-play-state: paused;
+}
+
+/* Animación continua (como “marquee” moderno) */
+@keyframes scroll-logos {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); } /* -50% porque duplicamos el bloque */
+}
+
+/* Respeta usuarios con “reducir movimiento” */
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* Ajustes responsive */
+@media (max-width: 576px) {
+  .logo { height: 34px; }
+  .marquee-track { gap: 2rem; }
+}
