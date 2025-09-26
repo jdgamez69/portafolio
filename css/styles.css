@@ -28,27 +28,17 @@ body { font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helve
   height: auto;
 }
 
-.list-checks {
-  list-style: none;
-  padding: 0;
-  margin: 0 auto;
-  max-width: 800px; /* centrado, ajusta a tu gusto */
-  text-align: left; /* mantiene ordenado */
+
+.subtitulo {
+  font-size: 1.2rem;    /* un poco más grande */
+  font-weight: 700;     /* negrita */
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  color: #0d6efd;       /* azul primario de Bootstrap, puedes cambiar */
 }
 
-.list-checks li {
-  position: relative;
-  padding-left: 1.8em;
-  margin-bottom: 0.6em;
-  color: #fff; /* texto blanco */
-  font-size: 1rem; /* mismo tamaño que el texto normal */
-}
-
-.list-checks li::before {
-  content: "✔";
-  position: absolute;
-  left: 0;
-  top: 0;
-  color: #fff;   /* check en blanco */
-  font-weight: bold;
+.about-text {
+  text-align: center;
+  max-width: 900px; /* opcional: limita el ancho para que no se vea muy largo */
+  margin: 0 auto;   /* centra el bloque */
 }
