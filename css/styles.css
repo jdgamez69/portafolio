@@ -80,7 +80,7 @@ body { font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helve
 /* Animación continua (como “marquee” moderno) */
 @keyframes scroll-logos {
   from { transform: translateX(0); }
-  to   { transform: translateX(-50%); } /* -50% porque duplicamos el bloque */
+  to   { transform: translateX(-100%); } /* sin duplicado */
 }
 
 /* Respeta usuarios con “reducir movimiento” */
@@ -93,3 +93,14 @@ body { font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helve
   .logo { height: 34px; }
   .marquee-track { gap: 2rem; }
 }
+
+
+.marquee-track{
+  display:flex;
+  align-items:center;
+  gap:2.5rem;
+  width:max-content;        /* asegura ancho según contenido */
+  animation:scroll-logos 30s linear infinite;
+}
+
+.logo-item{ min-width:140px; }   /* sube de 120 → 140/160 si aún se ve A y B */
