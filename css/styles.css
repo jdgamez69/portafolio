@@ -3,7 +3,9 @@
 }
 
 html { scroll-behavior: smooth; }
-body { font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'; }
+body {
+  font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+}
 
 .navbar .nav-link { font-weight: 600; }
 
@@ -22,54 +24,43 @@ body { font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helve
 
 .footer { padding: 3rem 0; background: #f8f9fa; }
 
-
 .hero-avatar {
-  max-width: 260px;   /* ajusta el tamaño según lo que quieras */
+  max-width: 260px;
   height: auto;
 }
 
-
 .subtitulo {
-  font-size: 1.2rem;    /* un poco más grande */
-  font-weight: 700;     /* negrita */
+  font-size: 1.2rem;
+  font-weight: 700;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: #0d6efd;       /* azul primario de Bootstrap, puedes cambiar */
+  color: #0d6efd;
 }
 
 .about-text {
   text-align: center;
-  max-width: 900px; /* opcional: limita el ancho para que no se vea muy largo */
-  margin: 0 auto;   /* centra el bloque */
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-
-/* Cinta de logos */
+/* ==============================
+   Cinta de logos: Certificaciones
+   ============================== */
 .logo-marquee {
   overflow: hidden;
   position: relative;
+  /* desvanecer bordes izquierda/derecha */
   mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
 }
 
-.marquee-track {
+.logo-marquee .marquee-track {
   display: flex;
   align-items: center;
-  gap: 3rem;             /* separación entre logos */
+  gap: 3rem;                 /* separación entre items */
+  width: max-content;        /* ancho según contenido */
   will-change: transform;
-  animation: scroll-logos 30s linear infinite;  /* velocidad del scroll */
-}
-
-.logo {
-  height: 42px;          /* 🔧 ajusta altura de los logos */
-  width: auto;
-  filter: grayscale(1) opacity(0.85);
-  transition: filter .2s ease, transform .2s ease;
-}
-
-.logo:hover {
-  filter: grayscale(0) opacity(1);
-  transform: scale(1.04);
+  animation: scroll-logos 30s linear infinite; /* velocidad del scroll */
 }
 
 /* Pausa al pasar el mouse */
@@ -77,30 +68,58 @@ body { font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helve
   animation-play-state: paused;
 }
 
-/* Animación continua (como “marquee” moderno) */
+/* Ítems uniformes: IMG arriba + título abajo */
+.logo-item {
+  /* 2 filas: caja de imagen fija + caja de texto (2 líneas) */
+  display: grid;
+  grid-template-rows: 110px 2.6em;  /* ajusta 100–130px si necesitas más alto para los PNG */
+  justify-items: center;
+  align-items: center;
+  width: 220px;                      /* todos del mismo ancho */
+  text-align: center;
+}
+
+.logo-item img {
+  max-height: 100%;                  /* llena la fila de imagen */
+  max-width: 100%;
+  object-fit: contain;
+  image-rendering: auto;
+  filter: grayscale(1) opacity(.9);
+  transition: filter .2s ease, transform .2s ease;
+}
+
+.logo-item:hover img {
+  filter: none opacity(1);
+  transform: translateY(-2px);
+}
+
+.logo-item figcaption {
+  margin-top: .4rem;
+  line-height: 1.3;
+  font-size: .95rem;
+  text-transform: uppercase;
+
+  /* limitar a 2 líneas y mantener misma altura */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+/* Animación continua SIN bloque duplicado */
 @keyframes scroll-logos {
   from { transform: translateX(0); }
-  to   { transform: translateX(-100%); } /* sin duplicado */
+  to   { transform: translateX(-100%); }  /* sin duplicado */
 }
 
 /* Respeta usuarios con “reducir movimiento” */
 @media (prefers-reduced-motion: reduce) {
-  .marquee-track { animation: none; }
+  .logo-marquee .marquee-track { animation: none; }
 }
 
-/* Ajustes responsive */
+/* Responsive */
 @media (max-width: 576px) {
-  .logo { height: 34px; }
-  .marquee-track { gap: 2rem; }
+  .logo-marquee .marquee-track { gap: 2rem; }
+  .logo-item { width: 180px; grid-template-rows: 96px 2.6em; }
 }
-
-
-.marquee-track{
-  display:flex;
-  align-items:center;
-  gap:2.5rem;
-  width:max-content;        /* asegura ancho según contenido */
-  animation:scroll-logos 30s linear infinite;
-}
-
-.logo-item{ min-width:140px; }   /* sube de 120 → 140/160 si aún se ve A y B */
