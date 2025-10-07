@@ -12,3 +12,12 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   window.addEventListener('keydown', handleFirstTab);
 });
+
+
+document.querySelectorAll('.marquee-track').forEach(track => {
+  // Si no está aún duplicado, duplica el contenido (A -> A+B)
+  if (!track.dataset.cloned) {
+    track.innerHTML = track.innerHTML + track.innerHTML;
+    track.dataset.cloned = 'true';
+  }
+});

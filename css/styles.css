@@ -60,7 +60,7 @@ body {
   gap: 3rem;                 /* separación entre items */
   width: max-content;        /* ancho según contenido */
   will-change: transform;
-  animation: scroll-logos 30s linear infinite; /* velocidad del scroll */
+  animation: scroll-logos 60s linear infinite; /* velocidad del scroll */
 }
 
 /* Pausa al pasar el mouse */
