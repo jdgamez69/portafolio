@@ -123,3 +123,15 @@ body {
   .logo-marquee .marquee-track { gap: 2rem; }
   .logo-item { width: 180px; grid-template-rows: 96px 2.6em; }
 }
+
+.project-cover {
+  height: 220px;
+  object-fit: contain;
+  background-color: #eef1f4;
+}
+
+@media (max-width: 576px) {
+  .project-cover {
+    height: 180px;
+  }
+}
