@@ -1,10 +1,14 @@
 :root {
   --primary: #0d6efd;
+  --marquee-duration: 60s;
 }
 
 html { scroll-behavior: smooth; }
+
 body {
-  font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans', 'Liberation Sans', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  font-family: 'Lato', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue',
+    Arial, 'Noto Sans', 'Liberation Sans', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
 }
 
 .navbar .nav-link { font-weight: 600; }
@@ -34,7 +38,7 @@ body {
   font-weight: 700;
   margin-top: 1rem;
   margin-bottom: 0.5rem;
-  color: #0d6efd;
+  color: var(--primary);
 }
 
 .about-text {
@@ -44,11 +48,22 @@ body {
 }
 
 /* ==============================
+   Accesibilidad: foco con teclado
+   ============================== */
+:focus { outline: none; }
+
+.user-is-tabbing :focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 3px;
+}
+
+/* ==============================
    Cinta de logos: Certificaciones
    ============================== */
 .logo-marquee {
   overflow: hidden;
   position: relative;
+
   /* desvanecer bordes izquierda/derecha */
   mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
   -webkit-mask-image: linear-gradient(to right, transparent, #000 8%, #000 92%, transparent);
@@ -60,7 +75,7 @@ body {
   gap: 3rem;                 /* separación entre items */
   width: max-content;        /* ancho según contenido */
   will-change: transform;
-  animation: scroll-logos 60s linear infinite; /* velocidad del scroll */
+  animation: scroll-logos var(--marquee-duration) linear infinite;
 }
 
 /* Pausa al pasar el mouse */
@@ -70,17 +85,16 @@ body {
 
 /* Ítems uniformes: IMG arriba + título abajo */
 .logo-item {
-  /* 2 filas: caja de imagen fija + caja de texto (2 líneas) */
   display: grid;
-  grid-template-rows: 110px 2.6em;  /* ajusta 100–130px si necesitas más alto para los PNG */
+  grid-template-rows: 110px 2.6em; /* ajusta 100–130px si necesitas más alto para los PNG */
   justify-items: center;
   align-items: center;
-  width: 220px;                      /* todos del mismo ancho */
+  width: 220px;                    /* todos del mismo ancho */
   text-align: center;
 }
 
 .logo-item img {
-  max-height: 100%;                  /* llena la fila de imagen */
+  max-height: 100%;
   max-width: 100%;
   object-fit: contain;
   image-rendering: auto;
@@ -107,31 +121,30 @@ body {
   -webkit-box-orient: vertical;
 }
 
-/* Animación continua SIN bloque duplicado */
+/* Animación continua (CON contenido duplicado por JS)
+   Recorre solo la mitad del track (A+A) => -50% */
 @keyframes scroll-logos {
   from { transform: translateX(0); }
-  to   { transform: translateX(-100%); }  /* sin duplicado */
+  to   { transform: translateX(-50%); }
 }
 
 /* Respeta usuarios con “reducir movimiento” */
 @media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
   .logo-marquee .marquee-track { animation: none; }
 }
 
-/* Responsive */
-@media (max-width: 576px) {
-  .logo-marquee .marquee-track { gap: 2rem; }
-  .logo-item { width: 180px; grid-template-rows: 96px 2.6em; }
-}
-
+/* Proyectos */
 .project-cover {
   height: 220px;
   object-fit: contain;
   background-color: #eef1f4;
 }
 
+/* Responsive */
 @media (max-width: 576px) {
-  .project-cover {
-    height: 180px;
-  }
+  .logo-marquee .marquee-track { gap: 2rem; }
+  .logo-item { width: 180px; grid-template-rows: 96px 2.6em; }
+
+  .project-cover { height: 180px; }
 }

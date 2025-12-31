@@ -11,13 +11,21 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
   window.addEventListener('keydown', handleFirstTab);
-});
 
+  // Marquee: duplicar de forma segura y accesible
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-document.querySelectorAll('.marquee-track').forEach(track => {
-  // Si no está aún duplicado, duplica el contenido (A -> A+B)
-  if (!track.dataset.cloned) {
-    track.innerHTML = track.innerHTML + track.innerHTML;
+  document.querySelectorAll('.marquee-track').forEach(track => {
+    if (reduceMotion) return;
+    if (track.dataset.cloned) return;
+
+    const items = Array.from(track.children);
+    items.forEach(item => {
+      const clone = item.cloneNode(true);
+      clone.setAttribute('aria-hidden', 'true'); // evita lectura duplicada
+      track.appendChild(clone);
+    });
+
     track.dataset.cloned = 'true';
-  }
+  });
 });
