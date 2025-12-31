@@ -4,7 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Portafolio — Jorman David Gamez</title>
-    <meta name="description" content="Ingeniero de Sistemas: virtualización, redes, seguridad y open source. Diseño e implemento infraestructuras eficientes con enfoque en automatización y resiliencia."/>
+
+    <meta
+      name="description"
+      content="Ingeniero de Sistemas: virtualización, redes, seguridad y open source. Diseño e implemento infraestructuras eficientes con enfoque en automatización y resiliencia."
+    />
+    <meta name="theme-color" content="#0d6efd" />
+
+    <!-- Canonical (ajústalo a tu dominio real) -->
+    <link rel="canonical" href="https://example.com" />
 
     <!-- Open Graph -->
     <meta property="og:title" content="Portafolio — Jorman David Gamez" />
@@ -12,28 +20,63 @@
     <meta property="og:type" content="website" />
     <meta property="og:image" content="assets/img/og-cover.svg" />
     <meta property="og:url" content="https://example.com" />
+    <meta property="og:locale" content="es_CO" />
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Portafolio — Jorman David Gamez" />
+    <meta name="twitter:description" content="Virtualización • Redes • Seguridad • Open Source" />
+    <meta name="twitter:image" content="assets/img/og-cover.svg" />
 
     <!-- Favicons -->
-    <link rel="icon" href="assets/img/og-cover.svg" />
+    <link rel="icon" type="image/svg+xml" href="assets/img/og-cover.svg" />
 
     <!-- Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" defer crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Lato:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+      defer
+      crossorigin="anonymous"
+    ></script>
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <link href="css/styles.css" rel="stylesheet" />
   </head>
+
   <body id="page-top">
+    <!-- Skip link (accesibilidad) -->
+    <a class="visually-hidden-focusable" href="#main-content">Saltar al contenido</a>
+
     <!-- Nav -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom">
+    <nav
+      class="navbar navbar-expand-lg bg-body-tertiary fixed-top border-bottom"
+      data-bs-theme="light"
+      aria-label="Navegación principal"
+    >
       <div class="container">
         <a class="navbar-brand fw-bold" href="#page-top">J. D. Gamez</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarResponsive"
+          aria-controls="navbarResponsive"
+          aria-expanded="false"
+          aria-label="Mostrar/ocultar menú"
+        >
           <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
             <li class="nav-item"><a class="nav-link" href="#experiencia">Experiencia</a></li>
@@ -48,115 +91,167 @@
     <!-- Hero -->
     <header class="masthead text-white text-center" role="banner">
       <div class="container d-flex flex-column align-items-center">
-        <img src="assets/img/portfolio/Foto3.png"
-        alt="Foto de Jorman David Gamez"
-        class="rounded-circle shadow-sm mb-3 hero-avatar"
-         loading="lazy">
+        <img
+          src="assets/img/portfolio/Foto3.png"
+          alt="Foto de Jorman David Gamez"
+          class="rounded-circle shadow-sm mb-3 hero-avatar"
+          width="200"
+          height="200"
+          loading="eager"
+          fetchpriority="high"
+          decoding="async"
+        />
+
         <h1 class="display-5 fw-bold text-uppercase mb-1">Jorman David Gamez</h1>
-        <p class="lead mb-4">Virtualización Data Center • Redes Cisco • Seguridad Informática • Open Source • Asterisk</p>
-        <ul class="list-unstyled small opacity-75 text-start mx-auto mb-4" style="max-width:740px">
+        <p class="lead mb-4">
+          Virtualización Data Center • Redes Cisco • Seguridad Informática • Open Source • Asterisk
+        </p>
+
+        <ul class="list-unstyled small opacity-75 text-start mx-auto mb-4" style="max-width: 740px">
           <li>✔ Diseño e implementación de infraestructuras resilientes (Proxmox/VMware, Linux/Windows).</li>
           <li>✔ Seguridad y continuidad (ISO/IEC 27001, firewalls).</li>
-          <li>✔ Comunicaciones IP: diseño y administración de PBX en Asterisk</li>
+          <li>✔ Comunicaciones IP: diseño y administración de PBX en Asterisk.</li>
         </ul>
-        <div class="d-flex gap-2">
+
+        <div class="d-flex gap-2 flex-wrap justify-content-center">
           <a class="btn btn-light btn-lg" href="#proyectos">Ver proyectos</a>
-          <a class="btn btn-outline-light btn-lg" href="assets/archivos/Hoja de vida 2026.pdf">Descargar CV</a>
+          <a
+            class="btn btn-outline-light btn-lg"
+            href="assets/archivos/Hoja%20de%20vida%202026.pdf"
+            download
+          >
+            Descargar CV
+          </a>
           <a class="btn btn-outline-light btn-lg" href="#contacto">Agendar reunión</a>
         </div>
       </div>
     </header>
 
-    <!-- Experiencia -->
-    <section class="page-section" id="experiencia" aria-labelledby="exp-title">
-      <div class="container">
-        <h2 id="exp-title" class="text-center text-uppercase mb-4">Experiencia</h2>
-        <div class="row g-4">
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h3 class="h5">Asterisk & Telefonía IP</h3>
-                <p class="mb-2 small">Integración con plataformas como Issabel, FreePBX, OmniLeads, Elastix y VitalPBX.</p>
-                <ul class="small mb-0">
-                  <li>Despliegue y mantenimiento de centrales IP.</li>
-                  <li>Integraciones con CRM y gestión de colas.</li>
-                  <li>Llamadas entrantes (inbound) y salientes (outbound).</li>
-                  <li>PBX con opciones avanzadas de IVR (menús interactivos).</li>
-                  <li>Marcadores predictivos, progresivos y preview.</li>
-                  <li>Encuestas automáticas y buzón de voz.</li>
-                  <li>Cortinas de llamadas y mensajes personalizados.</li>
-                  <li>Reportería en tiempo real y grabación de llamadas.</li>
-                  <li>Canales omni-canal: voz, SMS, correo y chat.</li>
-                  <li>Monitorización y supervisión en vivo (barging, whisper, coaching).</li>
-                  <li>Integración con speech analytics y transcripción para mejorar calidad y cumplimiento.</li>
-                  <li>Integración con WhatsApp Business API para gestión de chats omnicanales.</li>
-                </ul>
+    <main id="main-content">
+      <!-- Experiencia -->
+      <section class="page-section" id="experiencia" aria-labelledby="exp-title">
+        <div class="container">
+          <h2 id="exp-title" class="text-center text-uppercase mb-4">Experiencia</h2>
+
+          <div class="row g-4">
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h3 class="h5">Asterisk & Telefonía IP</h3>
+                  <p class="mb-2 small">
+                    Integración con plataformas como Issabel, FreePBX, OmniLeads, Elastix y VitalPBX.
+                  </p>
+                  <ul class="small mb-0">
+                    <li>Despliegue y mantenimiento de centrales IP.</li>
+                    <li>Integraciones con CRM y gestión de colas.</li>
+                    <li>Llamadas entrantes (inbound) y salientes (outbound).</li>
+                    <li>PBX con opciones avanzadas de IVR (menús interactivos).</li>
+                    <li>Marcadores predictivos, progresivos y preview.</li>
+                    <li>Encuestas automáticas y buzón de voz.</li>
+                    <li>Cortinas de llamadas y mensajes personalizados.</li>
+                    <li>Reportería en tiempo real y grabación de llamadas.</li>
+                    <li>Canales omni-canal: voz, SMS, correo y chat.</li>
+                    <li>Monitorización y supervisión en vivo (barging, whisper, coaching).</li>
+                    <li>Integración con speech analytics y transcripción para calidad y cumplimiento.</li>
+                    <li>Integración con WhatsApp Business API para gestión de chats omnicanales.</li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h3 class="h5">Infraestructura Virtualizada & Data Center</h3>
-                <p class="mb-2 small">Manejo de plataformas como Proxmox, VMware, Hyper-V, Citrix XenServer/XCP-ng, KVM, TrueNAS, OpenMediaVault y Ceph.</p>
-                <ul class="small mb-0">
+
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h3 class="h5">Infraestructura Virtualizada & Data Center</h3>
+                  <p class="mb-2 small">
+                    Manejo de plataformas como Proxmox, VMware, Hyper-V, Citrix XenServer/XCP-ng, KVM,
+                    TrueNAS, OpenMediaVault y Ceph.
+                  </p>
+                  <ul class="small mb-0">
                     <li>Consolidación de cargas de trabajo y optimización de recursos con máquinas virtuales.</li>
                     <li>Implementación de Data Center y entornos de alta disponibilidad.</li>
-                    <li>Planes de recuperación ante desastres (DRP) y réplicas de información en caliente.</li>
+                    <li>Planes de recuperación ante desastres (DRP) y réplicas en caliente.</li>
                     <li>Configuración de redes virtuales, VLANs y segmentación.</li>
                     <li>Monitoreo con herramientas open source (Zabbix, Graylog).</li>
-                    <li>Balanceo de carga y alta disponibilidad (HAProxy, Keepalived) para garantizar continuidad de servicio.</li>
-                    <li>Orquestación de contenedores con Kubernetes y Docker para microservicios y aplicaciones cloud-native.</li>
-                </ul>
+                    <li>Balanceo de carga y alta disponibilidad (HAProxy, Keepalived).</li>
+                    <li>Orquestación con Kubernetes y Docker para microservicios y cloud-native.</li>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <div class="card-body">
-                <h3 class="h5">Seguridad de la Información & Cumplimiento ISO/IEC 27001:2022 </h3>
-                <p class="mb-2 small"> Protocolos de seguridad basados en la ISO/IEC 27001:2022 y adopción de soluciones open source para proteger los activos de información.</p>
-                <ul class="small mb-0">
-                  <li>Backups versionados y políticas de retención.</li>
-                  <li>Nextcloud y sincronización híbrida.</li>
-                  <li>Directorio Activo / LDAP para gestión de accesos.</li>
-                  <li>Levantamiento de BIA y gestión de riesgos.</li>
-                  <li>Cifrado de discos y protección de datos sensibles.</li>
-                  <li>Firewalls open source (Zentyal, OPNsense) y comerciales (FortiGate).</li>
-                  <li>Monitoreo y SIEM con Wazuh, ELK, Suricata/Snort.</li>
-                  <li>Gestores de contraseñas seguros (Bitwarden, KeePassXC) y Servicio NTP.</li>
-                  <li>Planes de continuidad y contingencia.</li>
-                  <li>OpenDLP para la prevención de fuga de datos (DLP) en equipos y servidores.</li>
-                  <li>Pruebas de vulnerabilidades (escaneo y pentesting) y campañas de phishing simuladas con autorización y seguimiento de remediaciones</li>
-                </ul>
+
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <div class="card-body">
+                  <h3 class="h5">Seguridad de la Información & Cumplimiento ISO/IEC 27001:2022</h3>
+                  <p class="mb-2 small">
+                    Protocolos de seguridad basados en ISO/IEC 27001:2022 y adopción de soluciones open
+                    source para proteger activos de información.
+                  </p>
+                  <ul class="small mb-0">
+                    <li>Backups versionados y políticas de retención.</li>
+                    <li>Nextcloud y sincronización híbrida.</li>
+                    <li>Directorio Activo / LDAP para gestión de accesos.</li>
+                    <li>Levantamiento de BIA y gestión de riesgos.</li>
+                    <li>Cifrado de discos y protección de datos sensibles.</li>
+                    <li>Firewalls open source (Zentyal, OPNsense) y comerciales (FortiGate).</li>
+                    <li>Monitoreo y SIEM con Wazuh, ELK, Suricata/Snort.</li>
+                    <li>Gestores de contraseñas (Bitwarden, KeePassXC) y servicio NTP.</li>
+                    <li>Planes de continuidad y contingencia.</li>
+                    <li>OpenDLP para prevención de fuga de datos (DLP).</li>
+                    <li>
+                      Pruebas de vulnerabilidades (escaneo/pentesting) y simulaciones de phishing con
+                      autorización, más seguimiento de remediaciones.
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Proyectos -->
-    <section class="page-section bg-light" id="proyectos" aria-labelledby="proj-title">
-      <div class="container">
-        <h2 id="proj-title" class="text-center text-uppercase mb-4">Proyectos</h2>
-        <div class="row g-4">
-          <!-- Proyecto 1 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <img src="assets/img/portfolio/vmware.png" class="card-img-top project-cover"  width="1280" height="720" loading="lazy" >
-              <div class="card-body">
-                <h3 class="h5">Infraestructura In-House Virtualizada con VMware & TrueNAS</h3>
-                <div class="mb-2">
-                  <span class="badge text-bg-secondary">VMware vSphere</span>
-                  <span class="badge text-bg-secondary">TrueNAS</span>
-                  <span class="badge text-bg-secondary">iSCSI</span>
-                  <span class="badge text-bg-secondary">Linux</span>
-                  <span class="badge text-bg-secondary">Veeam Backup & Replication</span>
-                </div>
-                <p class="small mb-2"><strong>Problema:</strong> Infraestructura on-premise con servidores físicos aislados, sin alta disponibilidad, con riesgos de pérdida de información y procesos manuales de respaldo.</p>
-                <p class="small mb-2"><strong>Rol:</strong> Ingeniero responsable del diseño, implementación y administración de la infraestructura virtualizada (end-to-end).</p>
-                <p class="small mb-1"><strong>Solución:</strong></p>
+      <!-- Proyectos -->
+      <section class="page-section bg-light" id="proyectos" aria-labelledby="proj-title">
+        <div class="container">
+          <h2 id="proj-title" class="text-center text-uppercase mb-4">Proyectos</h2>
+
+          <div class="row g-4">
+            <!-- Proyecto 1 -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="assets/img/portfolio/vmware.png"
+                  class="card-img-top project-cover"
+                  alt="Infraestructura virtualizada con VMware y TrueNAS"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="card-body">
+                  <h3 class="h5">Infraestructura In-House Virtualizada con VMware & TrueNAS</h3>
+
+                  <div class="mb-2">
+                    <span class="badge text-bg-secondary">VMware vSphere</span>
+                    <span class="badge text-bg-secondary">TrueNAS</span>
+                    <span class="badge text-bg-secondary">iSCSI</span>
+                    <span class="badge text-bg-secondary">Linux</span>
+                    <span class="badge text-bg-secondary">Veeam Backup & Replication</span>
+                  </div>
+
+                  <p class="small mb-2">
+                    <strong>Problema:</strong> Infraestructura on-premise con servidores físicos aislados,
+                    sin alta disponibilidad, con riesgos de pérdida de información y procesos manuales de
+                    respaldo.
+                  </p>
+
+                  <p class="small mb-2">
+                    <strong>Rol:</strong> Ingeniero responsable del diseño, implementación y administración
+                    de la infraestructura virtualizada (end-to-end).
+                  </p>
+
+                  <p class="small mb-1"><strong>Solución:</strong></p>
                   <ul class="small mb-2">
                     <li>Implementación de infraestructura in-house basada en VMware vSphere.</li>
                     <li>Almacenamiento centralizado con TrueNAS usando iSCSI.</li>
@@ -165,213 +260,336 @@
                     <li>Estrategia de backup y recuperación con Veeam Backup & Replication.</li>
                     <li>Políticas de retención, restauración y pruebas periódicas de recuperación.</li>
                   </ul>
-                <p class="small mb-1"><strong>Resultado:</strong></p>
-                <ul class="small mb-2">
-                  <li>Mayor disponibilidad y continuidad del servicio.</li>
-                  <li>Reducción significativa del riesgo de pérdida de datos.</li>
-                  <li>Recuperación rápida ante fallos o incidentes.</li>
-                  <li>Optimización de recursos de hardware y costos operativos.</li>
-                </ul>
-              </div>
-        <!--     <div class="card-footer d-flex gap-2">--> 
-        <!--        <a href="https://github.com/jdgamez69/Sistema-de-ventas" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">Código</a> -->
-        <!--     </div> --> 
-            </div>
-          </div>
 
-         <!-- Proyecto 2 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <img src="assets/img/portfolio/omnicanalidad.png" class="card-img-top project-cover"  width="1280" height="720" loading="lazy" >
-              <div class="card-body">
-                <h3 class="h5">Plataforma de Telefonía IP y Contact Center (Asterisk)</h3>
-                <div class="mb-2">
-                  <span class="badge text-bg-secondary">Asterisk</span>
-                  <span class="badge text-bg-secondary">VoIP</span>
-                  <span class="badge text-bg-secondary">PBX</span>
-                  <span class="badge text-bg-secondary">Issabel</span>
-                  <span class="badge text-bg-secondary">OMniLeads</span>
-                  <span class="badge text-bg-secondary">Call Center</span>
-                  <span class="badge text-bg-secondary">Omnicanal</span>
+                  <p class="small mb-1"><strong>Resultado:</strong></p>
+                  <ul class="small mb-0">
+                    <li>Mayor disponibilidad y continuidad del servicio.</li>
+                    <li>Reducción significativa del riesgo de pérdida de datos.</li>
+                    <li>Recuperación rápida ante fallos o incidentes.</li>
+                    <li>Optimización de recursos de hardware y costos operativos.</li>
+                  </ul>
                 </div>
-                <p class="small mb-2"><strong>Problema:</strong> Gestión manual de llamadas con baja trazabilidad, ausencia de grabación y monitoreo, imposibilidad de implementar marcadores predictivos y limitaciones operativas en plataformas PBX tradicionales.</p>
-                <p class="small mb-2"><strong>Rol:</strong> Arquitectura, despliegue, configuración y administración integral de la plataforma de comunicaciones.</p>
-                <p class="small mb-1"><strong>Solución:</strong></p>
+
+                <!--
+                <div class="card-footer d-flex gap-2">
+                  <a href="https://github.com/..." class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">Código</a>
+                </div>
+                -->
+              </div>
+            </div>
+
+            <!-- Proyecto 2 -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="assets/img/portfolio/omnicanalidad.png"
+                  class="card-img-top project-cover"
+                  alt="Plataforma de Contact Center con Asterisk e integraciones omnicanal"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="card-body">
+                  <h3 class="h5">Plataforma de Telefonía IP y Contact Center (Asterisk)</h3>
+
+                  <div class="mb-2">
+                    <span class="badge text-bg-secondary">Asterisk</span>
+                    <span class="badge text-bg-secondary">VoIP</span>
+                    <span class="badge text-bg-secondary">PBX</span>
+                    <span class="badge text-bg-secondary">Issabel</span>
+                    <span class="badge text-bg-secondary">OmniLeads</span>
+                    <span class="badge text-bg-secondary">Call Center</span>
+                    <span class="badge text-bg-secondary">Omnicanal</span>
+                  </div>
+
+                  <p class="small mb-2">
+                    <strong>Problema:</strong> Gestión manual de llamadas con baja trazabilidad, ausencia
+                    de grabación y monitoreo, imposibilidad de implementar marcadores predictivos y
+                    limitaciones operativas en plataformas PBX tradicionales.
+                  </p>
+
+                  <p class="small mb-2">
+                    <strong>Rol:</strong> Arquitectura, despliegue, configuración y administración integral
+                    de la plataforma de comunicaciones.
+                  </p>
+
+                  <p class="small mb-1"><strong>Solución:</strong></p>
                   <ul class="small mb-2">
                     <li>Implementación de Asterisk como motor de telefonía IP.</li>
                     <li>Integración con Issabel y OmniLeads para operación de Contact Center.</li>
-                    <li>Configuración de IVR, colas de llamadas y grabación de llamadas.</li>
-                    <li>Implementación de marcadores predictivos, progresivos y preview.</li>
+                    <li>Configuración de IVR, colas y grabación de llamadas.</li>
+                    <li>Marcadores predictivos, progresivos y preview.</li>
                     <li>Campañas entrantes y salientes.</li>
                     <li>Integración con CRM y WhatsApp Business API.</li>
                     <li>Encuestas automáticas post-llamada.</li>
-                    <li>Reportes premium y métricas operativas.</li>
+                    <li>Reportes y métricas operativas.</li>
                     <li>Supervisión en tiempo real (escucha, whisper, barge).</li>
                   </ul>
-                <p class="small mb-1"><strong>Resultado:</strong></p>
-                <ul class="small mb-2">
-                  <li>Mejora significativa en los tiempos de atención y productividad.</li>
-                  <li>Incremento en la eficiencia operativa y cumplimiento de metas comerciales.</li>
-                  <li>Capacidad de más de 200 llamadas simultáneas por instancia.</li>
-                  <li>Grabación, monitoreo y trazabilidad en tiempo real.</li>
-                  <li>Plataforma escalable para campañas de alto volumen.</li>
-                </ul>
-              </div>
-        <!--     <div class="card-footer d-flex gap-2">--> 
-        <!--        <a href="https://github.com/jdgamez69/Sistema-de-ventas" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">Código</a> -->
-        <!--     </div> --> 
-            </div>
-          </div>
 
-        <!-- Proyecto 3 -->
-          <div class="col-md-4">
-            <div class="card h-100 shadow-sm">
-              <img src="assets/img/portfolio/27001.png" class="card-img-top project-cover"  width="1280" height="720" loading="lazy" >
-              <div class="card-body">
-                <h3 class="h5">Implementación de Seguridad de la Información & Cumplimiento ISO/IEC 27001:2022</h3>
-                <div class="mb-2">
-                  <span class="badge text-bg-secondary">ISO 27001:2022</span>
-                  <span class="badge text-bg-secondary">Seguridad de la Información</span>
-                  <span class="badge text-bg-secondary">Wazuh</span>
-                  <span class="badge text-bg-secondary">SIEM</span>
-                  <span class="badge text-bg-secondary">OPNsense</span>
-                  <span class="badge text-bg-secondary">ELK</span>
-                  <span class="badge text-bg-secondary">Omnicanal</span>
+                  <p class="small mb-1"><strong>Resultado:</strong></p>
+                  <ul class="small mb-0">
+                    <li>Mejora en tiempos de atención y productividad.</li>
+                    <li>Incremento en eficiencia operativa y cumplimiento de metas.</li>
+                    <li>Capacidad de más de 200 llamadas simultáneas por instancia.</li>
+                    <li>Grabación, monitoreo y trazabilidad en tiempo real.</li>
+                    <li>Plataforma escalable para campañas de alto volumen.</li>
+                  </ul>
                 </div>
-                <p class="small mb-2"><strong>Problema:</strong> Ausencia de controles formales de seguridad de la información, falta de monitoreo centralizado, debilidades en la gestión de accesos, respaldo de información y respuesta ante incidentes.</p>
-                <p class="small mb-2"><strong>Rol:</strong> Ingeniero responsable de la implementación técnica de controles de seguridad, alineados al estándar ISO/IEC 27001:2022.</p>
-                <p class="small mb-1"><strong>Solución:</strong></p>
+              </div>
+            </div>
+
+            <!-- Proyecto 3 -->
+            <div class="col-md-4">
+              <div class="card h-100 shadow-sm">
+                <img
+                  src="assets/img/portfolio/27001.png"
+                  class="card-img-top project-cover"
+                  alt="Implementación de controles de seguridad alineados a ISO/IEC 27001:2022"
+                  width="1280"
+                  height="720"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <div class="card-body">
+                  <h3 class="h5">Implementación de Seguridad & Cumplimiento ISO/IEC 27001:2022</h3>
+
+                  <div class="mb-2">
+                    <span class="badge text-bg-secondary">ISO 27001:2022</span>
+                    <span class="badge text-bg-secondary">Seguridad</span>
+                    <span class="badge text-bg-secondary">Wazuh</span>
+                    <span class="badge text-bg-secondary">SIEM</span>
+                    <span class="badge text-bg-secondary">OPNsense</span>
+                    <span class="badge text-bg-secondary">ELK</span>
+                  </div>
+
+                  <p class="small mb-2">
+                    <strong>Problema:</strong> Ausencia de controles formales, falta de monitoreo
+                    centralizado, debilidades en accesos, respaldos y respuesta a incidentes.
+                  </p>
+
+                  <p class="small mb-2">
+                    <strong>Rol:</strong> Implementación técnica de controles de seguridad alineados a
+                    ISO/IEC 27001:2022.
+                  </p>
+
+                  <p class="small mb-1"><strong>Solución:</strong></p>
                   <ul class="small mb-2">
-                    <li>Implementación de controles de seguridad basados en ISO/IEC 27001:2022.</li>
-                    <li>Análisis de riesgos y levantamiento de BIA (Business Impact Analysis).</li>
-                    <li>Implementación de SIEM con Wazuh + ELK para monitoreo de eventos.</li>
+                    <li>Controles de seguridad basados en ISO/IEC 27001:2022.</li>
+                    <li>Análisis de riesgos y BIA (Business Impact Analysis).</li>
+                    <li>SIEM con Wazuh + ELK para monitoreo de eventos.</li>
                     <li>Gestión de accesos mediante Active Directory / LDAP.</li>
-                    <li>Firewalls OPNsense y hardening de servidores.</li>
-                    <li>Políticas de backup versionado, retención y pruebas de restauración.</li>
-                    <li>Cifrado de información sensible en servidores y respaldos.</li>
+                    <li>OPNsense y hardening de servidores.</li>
+                    <li>Backups versionados, retención y pruebas de restauración.</li>
+                    <li>Cifrado de información sensible.</li>
                     <li>Pruebas de vulnerabilidades y seguimiento de remediaciones.</li>
                   </ul>
-                <p class="small mb-1"><strong>Resultado:</strong></p>
-                <ul class="small mb-2">
-                  <li>Incremento del nivel de madurez en seguridad de la información.</li>
-                  <li>Visibilidad centralizada de eventos y alertas de seguridad.</li>
-                  <li>Reducción de riesgos operativos y de pérdida de información.</li>
-                  <li>Base sólida para cumplimiento normativo y auditorías.</li>
-                  <li>Mejora en la continuidad del negocio y respuesta ante incidentes.</li>
-                </ul>
+
+                  <p class="small mb-1"><strong>Resultado:</strong></p>
+                  <ul class="small mb-0">
+                    <li>Mayor madurez en seguridad de la información.</li>
+                    <li>Visibilidad centralizada de eventos y alertas.</li>
+                    <li>Reducción de riesgos operativos y de pérdida de información.</li>
+                    <li>Base sólida para auditorías y cumplimiento normativo.</li>
+                    <li>Mejor continuidad del negocio y respuesta a incidentes.</li>
+                  </ul>
+                </div>
               </div>
-        <!--     <div class="card-footer d-flex gap-2">--> 
-        <!--        <a href="https://github.com/jdgamez69/Sistema-de-ventas" class="btn btn-sm btn-primary" target="_blank" rel="noopener noreferrer">Código</a> -->
-        <!--     </div> --> 
             </div>
           </div>
-
-    <!-- Sobre mí -->
-    <section class="page-section" id="sobre-mi" aria-labelledby="about-title">
-      <div class="container">
-        <h2 id="about-title" class="text-center text-uppercase mb-4">Sobre mí</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <p class="lead text-center">
-             Soy un Ingeniero de Sistemas apasionado por la tecnología y el software libre. Durante mi trayectoria he trabajado integrando soluciones de comunicaciones, virtualización y seguridad en entornos empresariales, siempre con un enfoque práctico y orientado a resultados.</p>
-            </p>
-              <p class="subtitulo">Me caracterizo por:</p>
-            </p>
-            <ul>
-              <li>Traducir necesidades de negocio en soluciones tecnológicas claras y sostenibles.</li>
-              <li>Documentar y transferir conocimiento para que los equipos sean más autónomos.</li>
-              <li>Combinar herramientas open source con tecnologías comerciales para optimizar recursos.</li>
-              <li>Mantener una visión estratégica apoyada en estándares internacionales como ISO/IEC 27001:2022.</li>
-            </ul>
-          </div>
-
-          <section class="page-section bg-light" id="certificaciones" aria-labelledby="certs-title">
- <div class="container">
-  <h2 id="certs-title" class="text-center text-uppercase mb-4">Certificaciones & Cursos</h2>
-
-  <div class="logo-marquee" aria-label="Certificaciones, cursos y títulos (desplazamiento automático)">
-    <div class="marquee-track">
-
-      <!-- ===== BLOQUE A (items reales) ===== -->
-      <figure class="logo-item">
-        <img src="assets/logos/U.png" alt="Título: Ingeniero de Sistemas"
-             width="128" height="128" loading="lazy" decoding="async">
-        <figcaption>Título: INGENIERO DE SISTEMAS</figcaption>
-      </figure>
-
-      <figure class="logo-item">
-        <img src="assets/logos/HM.png" alt="Título: Ingeniero de Sistemas"
-             width="128" height="128" loading="lazy" decoding="async">
-        <figcaption>ETHICAL HACKING</figcaption>
-      </figure>
-     
-      <figure class="logo-item">
-        <img src="assets/logos/SENA.png" alt="Título: Ingeniero de Sistemas"
-             width="128" height="128" loading="lazy" decoding="async">
-        <figcaption>APP DE HERRAMIENTAS DE AI PARA EL SECTOR BPO</figcaption>
-      </figure>
-
-      <figure class="logo-item">
-        <img src="assets/logos/HM.png" alt="Título: Ingeniero de Sistemas"
-             width="128" height="128" loading="lazy" decoding="async">
-        <figcaption>AUDITOR ISO 27001:2022</figcaption>
-      </figure>
-
-      <figure class="logo-item">
-        <img src="assets/logos/SENA.png" alt="Título: Ingeniero de Sistemas"
-             width="128" height="128" loading="lazy" decoding="async">
-        <figcaption>GESTIÓN EN LAS OPE. DE CONTACT CENTER</figcaption>
-      </figure>
-
-      <figure class="logo-item">
-        <img src="assets/logos/U.png" alt="SEMINARIO AMAZON WEB SERVICES (AWS)"
-             width="128" height="128" loading="lazy" decoding="async">
-        <figcaption>SEMINARIO AMAZON WEB SERVICES (AWS)</figcaption>
-      </figure>
-
-      <figure class="logo-item">
-        <img src="assets/logos/SENA.png" alt="Título: Ingeniero de Sistemas"
-             width="128" height="128" loading="lazy" decoding="async">
-        <figcaption>EXCEL Y ACCESS PARA EL DESARROLLO DE APP</figcaption>
-      </figure>
-                     
-    </div>
-  </div>
-</div>
-</section>
+          <!-- /row -->
         </div>
-      </div>
-    </section>
+        <!-- /container -->
+      </section>
 
-    <!-- Contacto -->
-    <section class="page-section bg-light" id="contacto" aria-labelledby="contact-title">
-      <div class="container">
-        <h2 id="contact-title" class="text-center text-uppercase mb-4">Contacto</h2>
-        <div class="row justify-content-center">
-          <div class="col-lg-8 col-xl-7">
-            <form action="https://formspree.io/f/xvoerlpl" method="POST">
-              <div class="form-floating mb-3">
-                <input class="form-control" id="name" name="name" type="text" placeholder="Ingrese su nombre..." required>
-                <label for="name">Nombre y apellido</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input class="form-control" id="email" name="email" type="email" placeholder="nombre@ejemplo.com" required>
-                <label for="email">Correo electrónico</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input class="form-control" id="phone" name="phone" type="tel" placeholder="(123) 456-7890" required>
-                <label for="phone">Número telefónico</label>
-              </div>
-              <div class="form-floating mb-3">
-                <textarea class="form-control" id="message" name="message" placeholder="Ingrese su mensaje aquí..." style="height: 10rem" required></textarea>
-                <label for="message">Mensaje</label>
-              </div>
-              <button class="btn btn-primary" type="submit">Enviar</button>
-            </form>
+      <!-- Sobre mí -->
+      <section class="page-section" id="sobre-mi" aria-labelledby="about-title">
+        <div class="container">
+          <h2 id="about-title" class="text-center text-uppercase mb-4">Sobre mí</h2>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-8">
+              <p class="lead text-center">
+                Soy un Ingeniero de Sistemas apasionado por la tecnología y el software libre. Durante mi
+                trayectoria he trabajado integrando soluciones de comunicaciones, virtualización y seguridad
+                en entornos empresariales, siempre con un enfoque práctico y orientado a resultados.
+              </p>
+
+              <p class="subtitulo mb-2">Me caracterizo por:</p>
+
+              <ul class="mb-0">
+                <li>Traducir necesidades de negocio en soluciones tecnológicas claras y sostenibles.</li>
+                <li>Documentar y transferir conocimiento para que los equipos sean más autónomos.</li>
+                <li>Combinar herramientas open source con tecnologías comerciales para optimizar recursos.</li>
+                <li>Visión estratégica apoyada en estándares como ISO/IEC 27001:2022.</li>
+              </ul>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+
+      <!-- Certificaciones -->
+      <section class="page-section bg-light" id="certificaciones" aria-labelledby="certs-title">
+        <div class="container">
+          <h2 id="certs-title" class="text-center text-uppercase mb-4">Certificaciones & Cursos</h2>
+
+          <div class="logo-marquee" aria-label="Certificaciones, cursos y títulos (desplazamiento automático)">
+            <div class="marquee-track">
+              <figure class="logo-item">
+                <img
+                  src="assets/logos/U.png"
+                  alt="Logo de universidad — Título Ingeniero de Sistemas"
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>TÍTULO: INGENIERO DE SISTEMAS</figcaption>
+              </figure>
+
+              <figure class="logo-item">
+                <img
+                  src="assets/logos/HM.png"
+                  alt="Certificación Ethical Hacking"
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>ETHICAL HACKING</figcaption>
+              </figure>
+
+              <figure class="logo-item">
+                <img
+                  src="assets/logos/SENA.png"
+                  alt="Curso SENA — Herramientas de IA para el sector BPO"
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>APP DE HERRAMIENTAS DE IA PARA EL SECTOR BPO</figcaption>
+              </figure>
+
+              <figure class="logo-item">
+                <img
+                  src="assets/logos/HM.png"
+                  alt="Curso Auditor ISO 27001:2022"
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>AUDITOR ISO 27001:2022</figcaption>
+              </figure>
+
+              <figure class="logo-item">
+                <img
+                  src="assets/logos/SENA.png"
+                  alt="Curso SENA — Gestión de operaciones de Contact Center"
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>GESTIÓN EN LAS OPERACIONES DE CONTACT CENTER</figcaption>
+              </figure>
+
+              <figure class="logo-item">
+                <img
+                  src="assets/logos/U.png"
+                  alt="Seminario Amazon Web Services (AWS)"
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>SEMINARIO AMAZON WEB SERVICES (AWS)</figcaption>
+              </figure>
+
+              <figure class="logo-item">
+                <img
+                  src="assets/logos/SENA.png"
+                  alt="Curso SENA — Excel y Access para desarrollo de aplicaciones"
+                  width="128"
+                  height="128"
+                  loading="lazy"
+                  decoding="async"
+                />
+                <figcaption>EXCEL Y ACCESS PARA EL DESARROLLO DE APP</figcaption>
+              </figure>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contacto -->
+      <section class="page-section bg-light" id="contacto" aria-labelledby="contact-title">
+        <div class="container">
+          <h2 id="contact-title" class="text-center text-uppercase mb-4">Contacto</h2>
+
+          <div class="row justify-content-center">
+            <div class="col-lg-8 col-xl-7">
+              <form action="https://formspree.io/f/xvoerlpl" method="POST">
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="name"
+                    name="name"
+                    type="text"
+                    placeholder="Ingrese su nombre..."
+                    autocomplete="name"
+                    required
+                  />
+                  <label for="name">Nombre y apellido</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    type="email"
+                    placeholder="nombre@ejemplo.com"
+                    autocomplete="email"
+                    required
+                  />
+                  <label for="email">Correo electrónico</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <input
+                    class="form-control"
+                    id="phone"
+                    name="phone"
+                    type="tel"
+                    placeholder="+57 300 000 0000"
+                    autocomplete="tel"
+                    inputmode="tel"
+                    required
+                  />
+                  <label for="phone">Número telefónico</label>
+                </div>
+
+                <div class="form-floating mb-3">
+                  <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    placeholder="Ingrese su mensaje aquí..."
+                    style="height: 10rem"
+                    required
+                  ></textarea>
+                  <label for="message">Mensaje</label>
+                </div>
+
+                <button class="btn btn-primary" type="submit">Enviar</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
     <!-- Footer -->
     <footer class="footer text-center">
@@ -380,26 +598,67 @@
           <div class="col-lg-4 mb-4">
             <h4 class="text-uppercase mb-3">Ubicación</h4>
             <p class="mb-0">San José de Cúcuta, Colombia</p>
-            <p class="mb-0">Mail: jdgamez69@gmail.com</p>
+            <p class="mb-0">Mail: <a href="mailto:jdgamez69@gmail.com">jdgamez69@gmail.com</a></p>
           </div>
+
           <div class="col-lg-4 mb-4">
             <h4 class="text-uppercase mb-3">Redes</h4>
+
             <div class="d-flex gap-2 justify-content-center">
-              <a class="btn btn-outline-secondary btn-sm" href="https://web.facebook.com/jdgamez69/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-f"></i></a>
-              <a class="btn btn-outline-secondary btn-sm" href="https://twitter.com/Davidgamezz" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
-              <a class="btn btn-outline-secondary btn-sm" href="https://www.instagram.com/jdgamez69" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a>
+              <a
+                class="btn btn-outline-secondary btn-sm"
+                href="https://web.facebook.com/jdgamez69/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Facebook"
+              >
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+
+              <a
+                class="btn btn-outline-secondary btn-sm"
+                href="https://twitter.com/Davidgamezz"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="X/Twitter"
+              >
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+
+              <a
+                class="btn btn-outline-secondary btn-sm"
+                href="https://www.instagram.com/jdgamez69"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
+                <i class="fab fa-instagram" aria-hidden="true"></i>
+              </a>
             </div>
           </div>
+
           <div class="col-lg-4 mb-4">
             <h4 class="text-uppercase mb-3">Sobre el sitio</h4>
             <p class="mb-1 small">© <span id="year"></span> Ing. Jorman David Gamez</p>
-            <p class="small mb-0">Diseñado con Bootmez. Imágenes de portada a modo ilustrativo.</p>
+            <p class="small mb-0">Diseñado con Bootmez Tecnology. Imágenes de portada a modo ilustrativo.</p>
           </div>
         </div>
-      </div>¿Quieres trabajar conmigo? Escríbeme y hagamos realidad tu proyecto.
+
+        <p class="mt-3 mb-0">
+          ¿Quieres trabajar conmigo? Escríbeme y hagamos realidad tu proyecto.
+        </p>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/scripts.js"></script>
+
+    <!-- Año automático (por si scripts.js no lo hace) -->
+    <script>
+      (function () {
+        var el = document.getElementById("year");
+        if (el) el.textContent = new Date().getFullYear();
+      })();
+    </script>
   </body>
 </html>
